@@ -9,7 +9,7 @@ test("Add 1 + 5000 and it equals 5001", () => {
   const e = new Calculator();
   e.runAddition("1,5000");
   expect(e.comment).toBe("Success!!!");
-  expect(e.finalResultStr).toBe("1+5000 = 5001");
+  expect(e.finalResultStr).toBe("1+0 = 1");
 });
 
 test("Add 20 and it equals 20", () => {
@@ -66,4 +66,11 @@ test("Don't allow negative numbers", () => {
   e.runAddition("4,-3,-2,0,ttt,5,23");
   expect(e.comment).toBe("ERROR: calculator does not accept these negative numbers "+e.negativeNumberArray);
   expect(e.finalResultStr).toBe("");
+});
+
+test("Don't allow numbers bigger then 1000", () => {
+  const e = new Calculator();
+  e.runAddition("2,1001,6");
+  expect(e.comment).toBe("Success!!!");
+  expect(e.finalResultStr).toBe("2+0+6 = 8");
 });

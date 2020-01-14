@@ -1,5 +1,5 @@
 # Calculator
-Building a calculator that adds a string of numbers delimited by a comma or \n. This version does not allow user to enter negative numbers.
+Building a calculator that adds a string of numbers delimited by a comma or \n. This version does not allow user to enter negative numbers and numbers bigger than 1000.
 
 ## Getting Started
 + Clone the repo to get started
@@ -26,7 +26,7 @@ To deploy use the terminal and run the following commands:
 Only **Maria Tripoli** can contribute!!!
 
 ## Versioning
-Version 4 -  matched Requirement 4 in challenge
+Version 5 -  matched Requirement 5 in challenge
 
 ## Authors
 + **Maria Tripoli**
