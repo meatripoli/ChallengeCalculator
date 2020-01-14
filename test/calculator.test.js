@@ -46,3 +46,18 @@ test("Add 1+2+3+4+5+6+7+8+9+10+11+12 and it equals 78", () => {
   expect(e.comment).toBe("Success!!!");
   expect(e.finalResultStr).toBe("1+2+3+4+5+6+7+8+9+10+11+12 = 78");
 });
+
+test("Add 1\n2,3 and it equals 6", () => {
+  const e = new Calculator();
+  e.runAddition("1\n2,3");
+  expect(e.comment).toBe("Success!!!");
+  expect(e.finalResultStr).toBe("1+2+3 = 6");
+});
+
+//1\n2,3,4r9r
+test("Add 1\n2,3,4r9r and it equals 6", () => {
+  const e = new Calculator();
+  e.runAddition("1\n2,3,4r9r");
+  expect(e.comment).toBe("Success!!!");
+  expect(e.finalResultStr).toBe("1+2+3+0 = 6");
+});

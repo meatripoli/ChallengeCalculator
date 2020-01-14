@@ -1,5 +1,5 @@
 # Calculator
-Building a calculator that add a string of numbers delimited by a comma.
+Building a calculator that add a string of numbers delimited by a comma or \n.
 
 ## Getting Started
 + Clone the repo to get started
@@ -29,7 +29,7 @@ To deploy use the terminal and run the following commands:
 Only **Maria Tripoli** can contribute!!!
 
 ## Versioning
-Version 2 -  matched Requirement 2 in challenge
+Version 3 -  matched Requirement 3 in challenge
 
 ## Authors
 + **Maria Tripoli**

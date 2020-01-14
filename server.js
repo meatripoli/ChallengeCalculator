@@ -29,4 +29,3 @@ calculatorApp.post("/", (req,res) => {
     addCalculatorClass.runAddition(newAddInputString);
     res.redirect('/');
 });
-
