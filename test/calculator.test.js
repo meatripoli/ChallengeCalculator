@@ -19,11 +19,11 @@ test("Add 20 and it equals 20", () => {
   expect(e.finalResultStr).toBe("20 = 20");
 });
 
-test("Add 4 + -3 and it equals 1", () => {
+test("Don't allow negative numbers", () => {
   const e = new Calculator();
   e.runAddition("4,-3");
-  expect(e.comment).toBe("Success!!!");
-  expect(e.finalResultStr).toBe("4+-3 = 1");
+  expect(e.comment).toBe("ERROR: calculator does not accept these negative numbers "+e.negativeNumberArray);
+  expect(e.finalResultStr).toBe("");
 });
 
 test("Add 5 + tytyt and it equals 5", () => {
@@ -54,10 +54,16 @@ test("Add 1\n2,3 and it equals 6", () => {
   expect(e.finalResultStr).toBe("1+2+3 = 6");
 });
 
-//1\n2,3,4r9r
 test("Add 1\n2,3,4r9r and it equals 6", () => {
   const e = new Calculator();
   e.runAddition("1\n2,3,4r9r");
   expect(e.comment).toBe("Success!!!");
   expect(e.finalResultStr).toBe("1+2+3+0 = 6");
+});
+
+test("Don't allow negative numbers", () => {
+  const e = new Calculator();
+  e.runAddition("4,-3,-2,0,ttt,5,23");
+  expect(e.comment).toBe("ERROR: calculator does not accept these negative numbers "+e.negativeNumberArray);
+  expect(e.finalResultStr).toBe("");
 });
