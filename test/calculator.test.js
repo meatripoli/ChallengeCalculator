@@ -33,9 +33,16 @@ test("Add 5 + tytyt and it equals 5", () => {
   expect(e.finalResultStr).toBe("5+0 = 5");
 });
 
-test("Don't allow more then 2 numbers 4,6,r", () => {
+test("Add 4,6,r and it equals 10", () => {
   const e = new Calculator();
   e.runAddition("4,6,r");
-  expect(e.comment).toBe("ERROR: please only provide 2 numbers");
-  expect(e.finalResultStr).toBe("");
+  expect(e.comment).toBe("Success!!!");
+  expect(e.finalResultStr).toBe("4+6+0 = 10");
+});
+//
+test("Add 1+2+3+4+5+6+7+8+9+10+11+12 and it equals 78", () => {
+  const e = new Calculator();
+  e.runAddition("1,2,3,4,5,6,7,8,9,10,11,12");
+  expect(e.comment).toBe("Success!!!");
+  expect(e.finalResultStr).toBe("1+2+3+4+5+6+7+8+9+10+11+12 = 78");
 });
