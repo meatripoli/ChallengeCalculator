@@ -1,40 +1,35 @@
 # Calculator
-This homework was to build a calendar using jQuery 
-Currently deployed webiste:
-[Calculator]
+Building a calculator that add a string of two numbers delimited by a comma.
 
 ## Getting Started
 + Clone the repo to get started
-+ Recommend using Visual Studio Code or similar to edit code.
++ using the terminal run npm install
 
 ### Prerequisites
 None
 
 ### Installing
-None
+Run **npm install** in terminal
 
 ## Running the tests
-None
-
-### Break down into end to end tests
-None
-
-### And coding style tests
-None
+To run tests use the terminal and run command **npm test**
 
 ## Deployment
-None
+To deploy use the terminal and run the following commands:
++ npm start
++ go to browser and type in "http://localhost:8080/"
 
 ## Built With
 + Bootstrap - front end development framework
-+ Google Fonts/Font Awesome
 + jQuery
++ Node.js 
++ Jest (testing)
 
 ## Contributing
 Only **Maria Tripoli** can contribute!!!
 
 ## Versioning
-None
+Version 1 -  matched Requirement 1 in challenge
 
 ## Authors
 + **Maria Tripoli**

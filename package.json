@@ -1,0 +1,30 @@
+{
+  "name": "challenge-calculator",
+  "version": "1.0.0",
+  "description": "This homework was to build a calendar using jQuery  Currently deployed webiste: [Calculator]",
+  "main": "add.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "test": "jest --verbose test/*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/meatripoli/ChallengeCalculator.git"
+  },
+  "keywords": [],
+  "author": "Maria Tripoli",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/meatripoli/ChallengeCalculator/issues"
+  },
+  "homepage": "https://github.com/meatripoli/ChallengeCalculator#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "inquirer": "^7.0.3",
+    "jest": "^24.9.0",
+    "path": "^0.12.7"
+  }
+}
