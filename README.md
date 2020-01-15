@@ -1,6 +1,7 @@
 # Calculator
 Building a calculator that 
 + adds a string of numbers delimited by a custom single character delimiter. Format: //{delimiter}\n{numbers}
++ add a string of numbers delimited by a default delimiter (comma, new line/carrige return)
 This version does not allow user to enter negative numbers and numbers bigger than 1000.
 
 ## Getting Started
@@ -36,3 +37,5 @@ Version 6 -  matched Requirement 6 in challenge
 ## Acknowledgments
 Peeps
 :D
+
+

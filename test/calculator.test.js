@@ -35,42 +35,42 @@ test("Add 2 + ff + 100 and it equals 102", () => {
 
 test("Add 1 + 5000 and it equals 5001", () => {
   const e = new Calculator();
-  e.runAddition("//,\n1,5000");
+  e.runAddition("1,5000");
   expect(e.comment).toBe("Success!!!");
   expect(e.finalResultStr).toBe("1+0 = 1");
 });
 
 test("Add 20 and it equals 20", () => {
   const e = new Calculator();
-  e.runAddition("//,\n20");
+  e.runAddition("20");
   expect(e.comment).toBe("Success!!!");
   expect(e.finalResultStr).toBe("20 = 20");
 });
 
 test("Don't allow negative numbers", () => {
   const e = new Calculator();
-  e.runAddition("//,\n4,-3");
+  e.runAddition("4,-3");
   expect(e.comment).toBe("ERROR: calculator does not accept these negative numbers "+e.negativeNumberArray);
   expect(e.finalResultStr).toBe("");
 });
 
 test("Add 5 + tytyt and it equals 5", () => {
   const e = new Calculator();
-  e.runAddition("//,\n5,tytyt");
+  e.runAddition("5,tytyt");
   expect(e.comment).toBe("Success!!!");
   expect(e.finalResultStr).toBe("5+0 = 5");
 });
 
 test("Add 4,6,r and it equals 10", () => {
   const e = new Calculator();
-  e.runAddition("//,\n4,6,r");
+  e.runAddition("4,6,r");
   expect(e.comment).toBe("Success!!!");
   expect(e.finalResultStr).toBe("4+6+0 = 10");
 });
 //
 test("Add 1+2+3+4+5+6+7+8+9+10+11+12 and it equals 78", () => {
   const e = new Calculator();
-  e.runAddition("//,\n1,2,3,4,5,6,7,8,9,10,11,12");
+  e.runAddition("1,2,3,4,5,6,7,8,9,10,11,12");
   expect(e.comment).toBe("Success!!!");
   expect(e.finalResultStr).toBe("1+2+3+4+5+6+7+8+9+10+11+12 = 78");
 });
@@ -80,4 +80,11 @@ test("Add 1\n2,3,4r9r and it equals 6", () => {
   e.runAddition("//,\n1,2,3,4r9r");
   expect(e.comment).toBe("Success!!!");
   expect(e.finalResultStr).toBe("1+2+3+0 = 6");
+});
+
+test("delimiter can only be one character", () => {
+  const e = new Calculator();
+  e.runAddition("//,*\n1,2,3,4r9r");
+  expect(e.comment).toBe("ERROR: delimiter can only be one character");
+  expect(e.finalResultStr).toBe("");
 });
