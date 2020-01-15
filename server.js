@@ -30,6 +30,4 @@ calculatorApp.post("/", (req,res) => {
     res.redirect('/');
 });
 
-
-
     

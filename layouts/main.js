@@ -34,9 +34,9 @@ const htmlbody = (obj) =>
         </div>
         <div class="row" style="background-color:lightskyblue;">
             <ul> INPUT INSTRUCTIONS: 
-                <li>Please provide a list of numbers separated by a single character delimiter of your choice</li>
-                <li>Format: //{delimiter}\n{numbers} or {number}DEFAULT DELIMITER{number} </li>
-                <li>Examples: //#\n2#5 or 5,tytyt </li>
+                <li>Please provide a list of numbers separated by a delimiter of your choice</li>
+                <li>Format: //[{delimiter}]\n{numbers}, //[{delimiter}]\n{numbers}, or {number}DEFAULT DELIMITER{number} </li>
+                <li>Examples: //#\n2#5, //[##]\n2##5 or 5,tytyt </li>
                 <li>Default Delimiters include comma and new line/carrige return</li>
             </ul>
         </div>
