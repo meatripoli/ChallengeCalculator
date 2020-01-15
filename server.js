@@ -7,7 +7,7 @@ const path = require("path");
 
 const addCalculatorClass = new Calculator;
 var newAddInputString;
-var addedResult;
+var newDelimiter;
 
 const calculatorApp = express();
 const PORT = 8080;
@@ -25,7 +25,11 @@ calculatorApp.get("/",(req,res)=>{
 
 calculatorApp.post("/", (req,res) => {
     console.log("inside POST");
-    newAddInputString = req.body.stringToAdd;
-    addCalculatorClass.runAddition(newAddInputString);
+    console.log(req.body.stringToAdd)
+    addCalculatorClass.runAddition(req.body.stringToAdd);
     res.redirect('/');
 });
+
+
+
+    

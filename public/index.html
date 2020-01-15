@@ -13,23 +13,52 @@
             <h1 class="display-4" style="text-align: center;">CALCULATOR</h1>
         </div>
         <div class="container">
-            <div class="row"  style="padding-bottom: 10px;">
-                INSTRUCTIONS: Please input two numbers separated by a comma below
-            </div>
-            <div class="row" style="padding-bottom: 10px;">
-                <form class="form-inline" >
-                    <div class="form-group mb-2 ">
-                        <input type="text" class="form-control" id="stringtoaddinput" placeholder="example: 2,4" style="margin-right: 10px;">
+            <div class="row">
+                <div class="col-6">
+                    <div class="row"  style="padding-bottom: 10px;">
+                        <form class="form-inline" >
+                            <div class="col"> Numbers Input
+                                <div class="form-group mb-2 ">
+                                    <textarea name="numberinput" class="form-control" id="stringtoaddinput" cols="20" rows="1" style="margin-right: 10px;"></textarea>
+                                </div>
+                                <!--Note: to add other operations on the calculator I can just add a button for new operation-->
+                                <button type="submit" class="btn btn-primary mb-2" id="additionButton">Add</button>
+                            </div>
+                        </form>
                     </div>
-                    <!--Note: to add other operations on the calculator I can just add a button for new operation-->
-                    <button type="submit" class="btn btn-primary mb-2" id="additionButton">Add</button>
-                </form>
+                    <div class="row"  style="padding-bottom: 10px; margin-left: 1%;">
+                        <div>Result: 2+4 = 6</div>
+                    </div>
+                    <div class="row"  style="padding-bottom: 10px; margin-left: 1%;">
+                        <div>Comments: Success!!</div> 
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="row"  style="padding-bottom: 10px;">
+                        <form class="form-inline" >
+                            <div class="col"> Delimiter Input
+                                <div class="form-group mb-2 ">
+                                    <textarea name="delimiterinput" class="form-control" id="stringdelimiterinput" cols="20" rows="1" style="margin-right: 10px;"></textarea>
+                                </div>
+                                <!--Note: to add other operations on the calculator I can just add a button for new operation-->
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
-            <div class="row" style="padding-bottom: 10px;">
-                <div>Result: 2+4 = 6</div>
+        </div>
+        <div class="row" style="background-color:lightskyblue;">
+            <div class="col-6">
+                <ul> INPUT INSTRUCTIONS: 
+                    <li>Please provide a list of numbers separated by a default delimiter or a delimiter of your choice</li>
+                </ul>
             </div>
-            <div class="row" style="padding-bottom: 10px;">
-                <div>Comments: Success!!</div> 
+            <div class="col-6">
+                <ul> DELIMITER INSTRUCTIONS: 
+                    <li>Please provide a single character delimiter</li>
+                    <li>Note: If delimiter input is left empty the default delimiters listed below will be used</li>
+                    <li>Default delimiters: Comma (,) and New Line/Carrige Return (\n)</li>
+                </ul>
             </div>
         </div>
     </body>

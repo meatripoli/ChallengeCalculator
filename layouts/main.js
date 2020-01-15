@@ -15,23 +15,29 @@ const htmlbody = (obj) =>
         </div>
         <div class="container">
             <div class="row"  style="padding-bottom: 10px;">
-                INSTRUCTIONS: Please input two numbers separated by a comma below
-            </div>
-            <div class="row" style="padding-bottom: 10px;">
                 <form class="form-inline" >
-                    <div class="form-group mb-2 ">
-                        <input type="text" class="form-control" id="stringtoaddinput" placeholder="example: 2,4" style="margin-right: 10px;">
+                    <div class="col"> Numbers Input
+                        <div class="form-group mb-2 ">
+                            <textarea name="numberinput" class="form-control" id="stringtoaddinput" cols="20" rows="1" style="margin-right: 10px;"></textarea>
+                        </div>
+                        <!--Note: to add other operations on the calculator I can just add a button for new operation-->
+                        <button type="submit" class="btn btn-primary mb-2" id="additionButton">Add</button>
                     </div>
-                    <!--Note: to add other operations on the calculator I can just add a button for new operation-->
-                    <button type="submit" class="btn btn-primary mb-2" id="additionButton">Add</button>
                 </form>
             </div>
-            <div class="row" style="padding-bottom: 10px;">
+            <div class="row"  style="padding-bottom: 10px; margin-left: 1%;">
                 <div>Result: ${obj.finalResultStr}</div>
             </div>
-            <div class="row" style="padding-bottom: 10px;">
+            <div class="row"  style="padding-bottom: 10px; margin-left: 1%;">
                 <div>${obj.comment}</div> 
             </div>
+        </div>
+        <div class="row" style="background-color:lightskyblue;">
+            <ul> INPUT INSTRUCTIONS: 
+                <li>Please provide a list of numbers separated by a single character delimiter of your choice</li>
+                <li>Format: //{delimiter}\n{numbers}</li>
+                <li>Example: //#\n2#5</li>
+            </ul>
         </div>
     </body>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -43,10 +49,6 @@ const htmlbody = (obj) =>
         var newObj = {
             stringToAdd: $("#stringtoaddinput").val()
         };
-        // var newObj = {
-        //     stringToAdd: $("#stringtoaddinput").val(),
-        //     delimiter: $("#...").val()
-        // };
         console.log('new string captured')
         console.log(newObj)
         $.post("/", newObj)
