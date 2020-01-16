@@ -1,6 +1,6 @@
 # Calculator
 Building a calculator that 
-+ adds a string of numbers delimited by a custom delimiter. Format: //[{delimiter}] {numbers}, //[{delimiter}] {numbers}, or {number}DEFAULT DELIMITER{number}
++ adds a string of numbers delimited by a custom delimiter. Format: //[{delimiter1}][{delimiter2}]...\n{numbers}, //{delimiter} {numbers}, or {number}DEFAULT DELIMITER{number}
 + add a string of numbers delimited by a default delimiter (comma, new line/carrige return)
 This version does not allow user to enter negative numbers and numbers bigger than 1000.
 
@@ -22,14 +22,14 @@ To deploy use the terminal:
 ## Built With
 + Bootstrap - front end development framework
 + jQuery
-+ Node.js 
++ Node.js (Express.js)
 + Jest (testing)
 
 ## Contributing
 Only **Maria Tripoli** can contribute!!!
 
 ## Versioning
-Version 7 -  matched Requirement 7 in challenge
+Version 8 -  matched Requirement 8 in challenge
 
 ## Authors
 + **Maria Tripoli**
@@ -37,5 +37,3 @@ Version 7 -  matched Requirement 7 in challenge
 ## Acknowledgments
 Peeps
 :D
-
-

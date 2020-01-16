@@ -89,9 +89,16 @@ test("delimiter can only be one character", () => {
   expect(e.finalResultStr).toBe("");
 });
 
-test("Add 11***22***33 with delimiter *** and it equals 6", () => {
+test("Add 11 + 22 + 33 with delimiter *** and it equals 6", () => {
   const e = new Calculator();
   e.runAddition("//[***]\n11***22***33");
   expect(e.comment).toBe("Success!!!");
-  expect(e.finalResultStr).toBe("11+0+0+22+0+0+33 = 66");
+  expect(e.finalResultStr).toBe("11+22+33 = 66");
+});
+
+test("Add 11 + 22 + hh + 33 + 44 with delimiters [*][!!][r9r] and it equals 6", () => {
+  const e = new Calculator();
+  e.runAddition("//[*][!!][r9r]\n11r9r22*hh*33!!44");
+  expect(e.comment).toBe("Success!!!");
+  expect(e.finalResultStr).toBe("11+22+0+33+44 = 110");
 });
