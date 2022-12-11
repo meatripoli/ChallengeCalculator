@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/meatripoli/ChallengeCalculator#readme",
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "inquirer": "^7.0.3",
     "jest": "^24.9.0",
     "path": "^0.12.7"
